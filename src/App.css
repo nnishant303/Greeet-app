@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Global body styling */
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+/* App container with shadow and glass effect */
+.App {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+  width: 350px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Heading styles with glow */
+h1 {
+  color: rgb(220, 160, 10);
+  font-size: 26px;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 1px #694dce;
+}
+
+/* Input field styling */
+input {
+  width: 80%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color: #f0f0f0;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  font-size: 16px;
+}
+
+/* Button styling with shadow and hover glow */
+button {
+  margin: 8px;
+  padding: 12px 18px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(to right, #1d976c, #93f9b9);
+  box-shadow: 0 4px 15px rgba(14, 129, 229, 0.6);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  box-shadow: 0 0 20px #1e21e9, 0 0 40px #00ffcc;
+  transform: translateY(-2px);
+}
+
+/* Greeting message styling */
+h2 {
+  color: #ffffff;
+  margin-top: 30px;
+  font-size: 22px;
+  text-shadow: 0 0 10px #00ffe0;
+}
+
+
+input {
+  width: 80%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color: #f0f0f0;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  font-size: 16px;
+  transition: all 0.3s ease;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+}
+
+/* 🔥 Red glow on hover or focus */
+input:hover{
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgb(27, 170, 241), 0 0 20px red;
+  border: 1px solid red;
+}
+
+input:focus {
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgb(27, 170, 241), 0 0 20px rgb(157, 227, 17);
+  border: 1px solid rgb(60, 0, 255);
 }
